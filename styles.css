@@ -1,0 +1,253 @@
+:root {
+  --ink: #151515;
+  --muted: #555f66;
+  --line: #c8ced3;
+  --link: #0a567a;
+  --link-hover: #b31b1b;
+  --page: #fffdf9;
+  --accent: #d50032;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.skip-link {
+  left: 1rem;
+  padding: 0.5rem 0.75rem;
+  position: absolute;
+  top: -4rem;
+}
+
+.skip-link:focus {
+  background: #ffffff;
+  outline: 2px solid var(--accent);
+  top: 1rem;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 840px;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.intro {
+  align-items: start;
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: minmax(0, 1fr) 180px;
+}
+
+.simple-header {
+  margin-bottom: 1.75rem;
+}
+
+.tabs {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  gap: 0.25rem;
+  margin: 1.25rem 0 1.75rem;
+  padding: 0.45rem 0;
+}
+
+.tabs a {
+  border-radius: 3px;
+  color: var(--ink);
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+}
+
+.tabs a:hover,
+.tabs a:focus,
+.tabs a[aria-current="page"] {
+  background: #f0f2f3;
+  color: var(--link-hover);
+}
+
+.site-label {
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  margin: 0 0 0.45rem;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  border-bottom: 1px solid var(--line);
+  font-size: 1.2rem;
+  margin: 2rem 0 0.8rem;
+  padding-bottom: 0.25rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 0.75rem 0 1rem;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover);
+}
+
+address {
+  font-style: normal;
+  margin: 0.85rem 0 0;
+}
+
+.links {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.links span {
+  color: var(--muted);
+  margin: 0 0.25rem;
+}
+
+.portrait {
+  border-top: 5px solid var(--accent);
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+.portrait img {
+  aspect-ratio: 1 / 1.18;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.compact-list,
+.pub-list,
+.publication-list {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.compact-list li,
+.pub-list li,
+.publication-list li {
+  margin-bottom: 0.45rem;
+}
+
+.columns {
+  columns: 2 16rem;
+}
+
+.publication-page {
+  max-width: 940px;
+}
+
+.publication-list li {
+  padding-left: 0.15rem;
+}
+
+.teaching-list,
+.news-list {
+  margin: 0;
+}
+
+.teaching-list dt,
+.news-list dt {
+  font-weight: 600;
+  margin-top: 0.9rem;
+}
+
+.teaching-list dd,
+.news-list dd {
+  margin: 0.15rem 0 0;
+}
+
+.course-list {
+  display: grid;
+  gap: 0.3rem 1rem;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  margin: 0;
+}
+
+.course-list dt {
+  font-weight: 600;
+}
+
+.course-list dd {
+  margin: 0;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .page {
+    padding-top: 1.5rem;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    max-width: 210px;
+  }
+
+  .course-list {
+    grid-template-columns: 1fr;
+  }
+
+  .course-list dt {
+    margin-top: 0.4rem;
+  }
+}
