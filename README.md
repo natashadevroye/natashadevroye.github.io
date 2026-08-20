@@ -1,7 +1,6 @@
 # Natasha Devroye academic homepage
 
-This is a lightweight static site for GitHub Pages. It is intentionally close
-to the spare academic-homepage format of <https://han-uic.github.io/> while
+This is a lightweight static site for GitHub Pages, 
 using content from <https://devroye.lab.uic.edu/>.
 
 ## Files
